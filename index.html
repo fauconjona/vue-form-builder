@@ -1,0 +1,25 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="form-builder">
+            <div class="template-list">
+                <template-element v-for="template in templates" :key="template.type" :template="template"></template-element>
+            </div>
+            <form-preview :blocs="blocs" :lignes="lignes">
+
+            </form-preview>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./form-builder/components/template.element.js"></script>
+        <script src="./form-builder/components/form.preview.js"></script>
+        
+        <script src="./form-builder/components/ligne.js"></script>
+        <script src="./form-builder/components/bloc.js"></script>
+        <script src="./form-builder/app.js"></script>
+    </body>
+</html>
